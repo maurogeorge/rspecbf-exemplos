@@ -37,6 +37,7 @@ group :test do
   gem 'capybara',             '2.1.0'
   gem 'poltergeist',          '1.4.1'
   gem 'webmock',              '1.17.2'
+  gem 'vcr',                  '2.8.0'
 end
 
 group :development, :test do

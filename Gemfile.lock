@@ -213,6 +213,7 @@ GEM
       raindrops (~> 0.7)
     unicorn-worker-killer (0.4.2)
       unicorn (~> 4)
+    vcr (2.8.0)
     webmock (1.17.2)
       addressable (>= 2.2.7)
       crack (>= 0.3.2)
@@ -257,4 +258,5 @@ DEPENDENCIES
   uglifier (= 2.3.2)
   unicorn (= 4.7.0)
   unicorn-worker-killer (= 0.4.2)
+  vcr (= 2.8.0)
   webmock (= 1.17.2)
