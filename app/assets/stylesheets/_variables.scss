@@ -1,0 +1,42 @@
+@charset "utf-8";
+
+
+/* Font Variables */
+
+$sans_serif: Arial, "Helvetica", sans-serif;
+
+$font-small: 12px;
+$font-medium: 15px;
+$font-large: 19px;
+$font-big: 29px;
+
+
+/* Color Variables */
+
+$grey1: #eee;
+$grey2: #ddd;
+$grey3: #999;
+$grey4: #666;
+$grey5: #333;
+
+
+/* Mixins */
+
+@mixin transition($property) {
+	-webkit-transition: $property 0.15s ease-in-out;
+	-moz-transition: $property 0.15s ease-in-out;
+	-o-transition: $property 0.15s ease-in-out;
+	transition: $property 0.15s ease-in-out;
+}
+
+@mixin clearfix {
+  &:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;
+    min-height: 0;
+  }
+}

@@ -13,4 +13,21 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
+
+function ready() {
+
+  /* Form: Focus and Hint */
+
+	$('input[type="text"], input[type="password"], textarea').focus(function() {
+    $(this).parent().find('.hint').show();
+		$(this).css("box-shadow", "#ccc 0 0 5px");
+	});
+	$('input[type="text"], input[type="password"], textarea').blur(function() {
+    $(this).parent().find('.hint').hide();
+		$(this).css("box-shadow", "none");
+	});
+
+}
+
+$(document).ready(ready);
+$(document).on('page:load', ready);

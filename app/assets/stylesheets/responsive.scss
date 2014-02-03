@@ -1,0 +1,108 @@
+@charset "utf-8";
+@import "variables";
+
+
+/* Viewport Config */
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@viewport {
+  zoom: 1.0;
+  width: extend-to-zoom;
+}
+
+@-ms-viewport {
+  width: extend-to-zoom;
+  zoom: 1.0;
+}
+
+
+/*
+Max Width, 960px
+Media Queries for Tablets and Kindle.
+*/
+
+@media (max-width:960px) {
+
+  .holder {
+    width: 700px;
+  }
+  
+}
+
+
+/*
+Max Width, 686px
+Media Queries for Smartphones.
+*/
+
+@media only screen and (max-width: 686px) {
+
+  .holder {
+    width: 90%;
+    padding: 0 5% 0 5%;
+  }
+  
+  .simple_form {
+    label {
+      width: auto;
+      display: block;
+      text-align: left;
+      float: none;
+    }
+  }
+
+
+  /* Fixed and Responsive Form */
+
+  .form-fixed {
+
+    .checkbox {
+      margin-left: 0;
+      margin-bottom: 0;
+    }
+
+    .radio_buttons {
+      margin-bottom: 0;
+      clear: both;
+      .control-label { margin-right: 0; }
+    }
+
+    .form-inputs {
+
+      input[type="text"],
+      input[type="password"],
+      input[type="email"],
+      input[type="tel"],
+      input[type="number"],
+      textarea {
+        width: 95%;
+        padding-left: 2%;
+        padding-right: 2%;
+      }
+
+      textarea {
+        min-width: 95%;
+        max-width: 95%;
+      }
+  
+    }
+    
+    .form-actions {
+      margin-top: 20px;
+      margin-left: 0;
+    }
+
+    .hint {
+      width: 95%;
+      padding: 10px 2% 10px 2%;
+      left: 0;
+    }
+
+  }
+
+}

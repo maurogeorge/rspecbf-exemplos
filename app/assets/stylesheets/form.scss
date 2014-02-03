@@ -1,0 +1,259 @@
+@charset "utf-8";
+@import "variables";
+
+
+/* Fluid Form */
+
+.simple_form {
+  
+  label {
+    font-weight: bold;
+  }
+  
+  .radio {
+    width: auto;
+  }
+  
+}
+
+.form-fluid {
+
+  label { display: block; }
+  
+  .form-inputs {
+    
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    textarea {
+      width: 95%;
+      padding-left: 2%;
+      padding-right: 2%;
+    }
+
+    textarea {
+      min-width: 95%;
+      max-width: 95%;
+    }
+  
+  }
+  
+  .form-actions {
+    width: 96%;
+    text-align: left;
+    border-radius: 4px;
+    background: $grey1;
+    padding: 10px 2% 10px 2%;
+    float: left;
+  }
+
+  .hint {
+    width: 95%;
+    padding: 10px 2% 10px 2%;
+    left: 0;
+  }
+
+}
+
+
+/* Fixed and Responsive Form */
+
+.form-fixed {
+
+  label {
+    width: 120px;
+    margin: 8px 15px 0 0;
+    text-align: right;
+    float: left;
+  }
+  
+  .checkbox {
+    width: auto;
+    margin-left: 135px;
+    margin-bottom: 15px;
+    clear: both;
+  }
+  
+  .radio_buttons {
+    margin-bottom: 25px;
+    clear: both;
+    .control-label { margin-right: 0; }
+  }
+  
+  .form-inputs {
+
+    input[type="text"],
+    input[type="password"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    textarea {
+      width: 320px;
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+
+    textarea {
+      min-width: 320px;
+      max-width: 320px;
+    }
+  
+  }
+  
+  .form-actions {
+    margin-left: 135px;
+    clear: both;
+  }
+  
+  .hint {
+    width: 320px;
+    padding: 10px;
+    left: 135px;
+  }
+  
+}
+
+
+/* Labels */
+
+input[type="checkbox"],
+input[type="radio"] { margin-right: 7px; }
+
+.radio_buttons {
+  .radio { margin-left: 20px; }
+}
+
+
+/* Fields */
+
+.form-inputs {
+  font-size: $font-medium;
+  margin-top: 20px;
+  
+  .input {
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  abbr {
+    border-bottom: none;
+    color: red;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"] {
+    border-radius: 4px;
+    border: 1px solid $grey2;
+    font: $font-medium $sans_serif;
+    height: 40px;
+    line-height: 40px;
+    color: $grey4;
+    outline: none;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  select,
+  textarea {
+    margin-top: 8px;
+  }
+  
+  textarea {
+    border-radius: 4px;
+    border: 1px solid $grey2;
+    height: 80px;
+    max-height: 160px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font: $font-medium $sans_serif;
+    outline: none;
+  }
+
+}
+
+
+/* Forms Actions */
+  
+.form-actions {
+
+  button,
+  input[type="submit"],
+  input[type="button"],
+  .btn {
+    border-radius: 4px;
+    height: 40px;
+    line-height: 40px;
+    background: white;
+    border: 1px solid $grey3;
+    padding: 0 10px 0 10px;
+    font: $font-medium $sans_serif;
+    outline: none;
+    color: $grey4;
+    &:hover { opacity: .7; }
+  }
+
+}
+
+
+/* Hint */
+
+.hint {
+  border-radius: 4px;
+  background: $grey5;
+  border: 1px solid $grey5;
+  font-size: $font-small;
+  color: white;
+  display: block;
+  position: absolute;
+  z-index: 300;
+  opacity: .9;
+  display: none;
+}
+
+.hint:before,
+.hint:after {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: 50%;
+  margin-left: -9px;
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid $grey5;
+}
+
+.string .hint { bottom: -41px; }
+.text .hint { bottom: -38px; }
+
+
+/* Validation */
+
+.validation-error {
+  border-top: 1px solid #ffbbb4;
+  border-bottom: 1px solid #ffbbb4;
+  background: #ffeae8;
+  padding: 10px;
+  margin: 0;
+  display: none;
+  li {
+    margin-left: 20px;
+    line-height: 19px;
+    font-size: $font-small;
+    color: #9e0000;
+  }
+}
+
+
+/* Othes Classes */
+
+.disabled { display: none; }

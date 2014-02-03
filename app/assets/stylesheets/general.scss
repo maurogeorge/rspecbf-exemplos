@@ -1,0 +1,22 @@
+@charset "utf-8";
+@import "variables";
+
+
+/* General Styles */
+
+body {
+  font-family: $sans_serif;
+}
+
+.holder {
+  width: 960px;
+  margin: auto;
+}
+
+/*
+.holder {
+  padding: 0 12% 0 12%;
+  margin: auto;
+}
+*/
+
