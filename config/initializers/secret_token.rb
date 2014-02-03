@@ -9,4 +9,4 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-RspecbfExemplos::Application.config.secret_key_base = 'a4d3949ed0d158a69e33c98dff67b6077dbab6ca6f11a1817e6b535b0bcc989d67a8aefaa273be5aefa926c5433e85b05c8399e32c3977e7de021d20a2f161e4'
+RspecbfExemplos::Application.config.secret_key_base = ENV['SECRET_TOKEN']
