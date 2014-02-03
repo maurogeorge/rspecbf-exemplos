@@ -5,11 +5,9 @@ describe CriadorPokemon do
   describe '#criar' do
 
     before do
-      body = '{' \
-        '  "name": "Charizard"' \
-        '}'
+      arquivo_resposta = File.new('spec/fixtures/services/criador_pokemon/resposta.txt')
       stub_request(:get, 'http://pokeapi.co/api/v1/pokemon/6/')
-      .to_return(status: 200, body: body, headers: {})
+      .to_return(arquivo_resposta)
     end
 
     let(:criador_pokemon) do
