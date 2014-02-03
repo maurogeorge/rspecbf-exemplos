@@ -8,6 +8,20 @@ Bundler.require(:default, Rails.env)
 
 module RspecbfExemplos
   class Application < Rails::Application
+    # Do not generate specs for views and requests. Also, do not generate assets.
+    config.generators do |g|
+      g.helper false
+      g.view_specs false
+      g.assets false
+      g.integration_tool false
+    end
+    config.app_generators do |g|
+      g.test_framework :rspec
+    end
+
+    # Prevent initializing your application and connect to the database on assets precompile.
+    config.assets.initialize_on_precompile = false
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
