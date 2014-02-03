@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe CriadorPokemon do
 
-  describe '#criar' do
+  describe '#criar', vcr: { cassette_name: 'CriadorPokemon/criar' } do
 
     let(:criador_pokemon) do
       CriadorPokemon.new(6)
@@ -10,18 +10,14 @@ describe CriadorPokemon do
 
     it 'cria um novo pokemon' do
       expect do
-        VCR.use_cassette('CriadorPokemon/criar') do
-          criador_pokemon.criar
-        end
+        criador_pokemon.criar
       end.to change{ Pokemon.count }.by(1)
     end
 
     describe 'pokemon criado' do
 
       before do
-        VCR.use_cassette('CriadorPokemon/criar') do
-          criador_pokemon.criar
-        end
+        criador_pokemon.criar
       end
 
       subject do
