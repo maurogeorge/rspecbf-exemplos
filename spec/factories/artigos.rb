@@ -5,12 +5,19 @@ FactoryGirl.define do
     titulo 'Diversas dicas do RSpec'
     conteudo 'Contenteúdo de Diversas dicas do RSpec'
 
-    factory :artigo_aprovado do
+    trait :aprovado do
       aprovado true
     end
 
-    factory :artigo_nao_aprovado do
+    trait :nao_aprovado do
       aprovado false
     end
+
+    trait :titulo_maiusculo do
+      titulo 'DIVERSAS DICAS DO RSPEC'
+    end
+
+    factory :artigo_aprovado_titulo_maiusculo,
+      traits: [:aprovado, :titulo_maiusculo]
   end
 end
