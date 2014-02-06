@@ -3,6 +3,6 @@
 FactoryGirl.define do
   factory :usuario do
     nome 'Mauro'
-    email 'mauro@helabs.com.br'
+    email { "#{nome}@helabs.com.br" }
   end
 end

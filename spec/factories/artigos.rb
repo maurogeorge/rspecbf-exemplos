@@ -2,7 +2,14 @@
 
 FactoryGirl.define do
   factory :artigo do
-    sequence(:titulo, 'a') { |n| "Diversas dicas do RSpec #{n}" }
-    conteudo { "Conteudo do artigo #{titulo}. Approved: #{aprovado}" }
+    titulo 'Diversas dicas do RSpec'
+    conteudo { "Conteudo do #{titulo}" }
+    usuario
+
+    trait :aprovado do
+      aprovado true
+    end
+
+    factory :artigo_aprovado, traits: [:aprovado]
   end
 end
