@@ -6,8 +6,12 @@ FactoryGirl.define do
     email { "#{nome}@helabs.com.br" }
 
     trait :com_artigo do
-      after(:create) do |usuario|
-        create_list(:artigo, 3, autor: usuario)
+      ignore do
+        total_de_artigos 3
+      end
+
+      after(:create) do |usuario, evaluator|
+        create_list(:artigo, evaluator.total_de_artigos, autor: usuario)
       end
     end
   end
