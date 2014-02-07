@@ -7,7 +7,7 @@ FactoryGirl.define do
 
     trait :com_artigo do
       after(:create) do |usuario|
-        create(:artigo, autor: usuario)
+        create_list(:artigo, 3, autor: usuario)
       end
     end
   end
