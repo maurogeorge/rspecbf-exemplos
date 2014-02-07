@@ -1,3 +1,3 @@
 class Artigo < ActiveRecord::Base
-  belongs_to :usuario
+  belongs_to :autor, class_name: 'Usuario'
 end
