@@ -5,7 +5,7 @@ describe Pokemon do
   describe '#nome_completo' do
 
     let(:pokemon) do
-      create(:pokemon)
+      build(:pokemon)
     end
 
     subject do
