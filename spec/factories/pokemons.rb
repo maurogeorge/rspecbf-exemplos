@@ -5,5 +5,6 @@ FactoryGirl.define do
     id_nacional 6
     nome 'Charizard'
     defesa 78
+    ataque 84
   end
 end
