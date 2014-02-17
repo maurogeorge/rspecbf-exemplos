@@ -34,6 +34,11 @@ RSpec.configure do |config|
   # instead of true.
   config.use_transactional_fixtures = true
 
+  # Use the new rspec expect syntax
+  config.expect_with :rspec do |c|
+    c.syntax = :expect
+  end
+
   config.order = "random"
   config.render_views
   config.treat_symbols_as_metadata_keys_with_true_values = true
