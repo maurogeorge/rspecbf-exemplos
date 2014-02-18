@@ -6,12 +6,12 @@ describe Pokemon do
 
    context 'quando possui nome e o id nacional' do
 
-     subject do
+     subject(:pokemon) do
        Pokemon.new(nome: 'Charizard', id_nacional: 6)
      end
 
       it 'exibe o nome e o id nacional' do
-        expect(subject.nome_completo).to eq('Charizard - 6')
+        expect(pokemon.nome_completo).to eq('Charizard - 6')
       end
     end
 
