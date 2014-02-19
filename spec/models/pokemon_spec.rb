@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Pokemon do
 
-  it { expect(subject).to be_a(ActiveRecord::Base)  }
+  it { should be_a(ActiveRecord::Base)  }
 
   describe '#nome_completo' do
 
