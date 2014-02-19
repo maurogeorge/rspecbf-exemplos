@@ -2,6 +2,8 @@ require 'spec_helper'
 
 describe Pokemon do
 
+  it { expect(subject).to be_a(ActiveRecord::Base)  }
+
   describe '#nome_completo' do
 
    context 'quando possui nome e o id nacional' do
