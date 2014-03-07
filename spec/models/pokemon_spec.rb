@@ -13,6 +13,10 @@ describe Pokemon do
       Timecop.freeze(hoje)
     end
 
+    after do
+      Timecop.return
+    end
+
     it 'tem o pokemon escolhido ontem' do
       pokemon_escolhido_ontem = create(:pokemon,
                                        escolhido_em: Time.zone.local(2010, 3, 6, 23, 59, 59))
@@ -29,13 +33,6 @@ describe Pokemon do
       pokemon_escolhido_antes_de_ontem = create(:pokemon,
                                                 escolhido_em: Time.zone.local(2010, 3, 5))
       expect(subject).to_not include(pokemon_escolhido_antes_de_ontem)
-    end
-  end
-
-  describe '.outro_metodo' do
-
-    it 'faz alguma coisa' do
-      puts Time.zone.now
     end
   end
 end
