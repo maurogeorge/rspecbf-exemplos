@@ -5,15 +5,15 @@ describe Pokemon do
   describe '.escolhidos_ontem' do
 
     let!(:pokemon_escolhido_hoje) do
-      create(:pokemon, escolhido_em: Time.zone.local(2014, 3, 7, 15))
+      create(:pokemon, escolhido_em: Time.zone.local(2010, 3, 7, 15))
     end
 
     let!(:pokemon_escolhido_ontem) do
-      create(:pokemon, escolhido_em: Time.zone.local(2014, 3, 6, 23, 59, 59))
+      create(:pokemon, escolhido_em: Time.zone.local(2010, 3, 6, 23, 59, 59))
     end
 
     let!(:pokemon_escolhido_antes_de_ontem) do
-      create(:pokemon, escolhido_em: Time.zone.local(2014, 3, 5))
+      create(:pokemon, escolhido_em: Time.zone.local(2010, 3, 5))
     end
 
     subject do
@@ -21,15 +21,21 @@ describe Pokemon do
     end
 
     it 'tem o pokemon escolhido ontem' do
-      expect(subject).to include(pokemon_escolhido_ontem)
+      Timecop.freeze(Time.zone.local(2010, 3, 7, 12)) do
+        expect(subject).to include(pokemon_escolhido_ontem)
+      end
     end
 
     it 'não tem o pokemon hoje' do
-      expect(subject).to_not include(pokemon_escolhido_hoje)
+      Timecop.freeze(Time.zone.local(2010, 3, 7, 12)) do
+        expect(subject).to_not include(pokemon_escolhido_hoje)
+      end
     end
 
     it 'não tem o pokemon escolhido antes de ontem' do
-      expect(subject).to_not include(pokemon_escolhido_antes_de_ontem)
+      Timecop.freeze(Time.zone.local(2010, 3, 7, 12)) do
+        expect(subject).to_not include(pokemon_escolhido_antes_de_ontem)
+      end
     end
   end
 end
