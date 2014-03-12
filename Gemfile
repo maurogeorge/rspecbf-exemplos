@@ -32,7 +32,6 @@ end
 
 group :test do
   gem 'shoulda-matchers',     '2.4.0'
-  gem 'simplecov',            '0.8.2', require: false
   gem 'email_spec',           '1.5.0'
   gem 'capybara',             '2.1.0'
   gem 'poltergeist',          '1.4.1'
