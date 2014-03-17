@@ -4,6 +4,6 @@ describe Pokemon do
 
   describe 'validações' do
 
-    include_examples 'valida presenca de string', Pokemon, :nome
+    it { expect(Pokemon).to valida_presenca_de_string :nome }
   end
 end
