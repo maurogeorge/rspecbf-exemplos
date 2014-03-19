@@ -9,6 +9,10 @@ RSpec::Matchers.define :valida_presenca_de_string do |attr|
     "experava-se que #{actual} tivesse validação de presencça em #{attr}"
   end
 
+  failure_message_when_negated do |actual|
+    "experava-se que #{actual} não tivesse validação de presencça em #{attr}"
+  end
+
   def verifica_vazio?(sujeito, attr)
     instancia = sujeito.new
     instancia.valid?
