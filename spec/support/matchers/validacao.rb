@@ -10,7 +10,11 @@ RSpec::Matchers.define :valida_presenca_de_string do |attr|
   end
 
   failure_message_when_negated do |actual|
-    "experava-se que #{actual} não tivesse validação de presencça em #{attr}"
+    "experava-se que #{actual} não tivesse validação de presença em #{attr}"
+  end
+
+  description do
+    "valida presença do #{attr}"
   end
 
   def verifica_vazio?(sujeito, attr)
