@@ -34,12 +34,11 @@ group :test do
   gem 'shoulda-matchers',     '2.4.0'
   gem 'simplecov',            '0.8.2', require: false
   gem 'email_spec',           '1.5.0'
-  gem 'capybara',             '2.1.0'
-  gem 'poltergeist',          '1.4.1'
+  gem 'capybara',             '2.2.0'
 end
 
 group :development, :test do
-  gem 'rspec-rails',          '2.14.0'
+  gem 'rspec-rails',          '3.0.0.beta2'
   gem 'factory_girl_rails',   '4.3.0'
   gem 'pry-rails',            '0.3.2'
   gem 'dotenv-rails',         '0.9.0'
