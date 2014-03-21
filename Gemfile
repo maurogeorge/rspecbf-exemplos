@@ -31,7 +31,7 @@ group :development do
 end
 
 group :test do
-  gem 'shoulda-matchers',     '2.4.0'
+  gem 'shoulda-matchers',     '2.5.0'
   gem 'simplecov',            '0.8.2', require: false
   gem 'email_spec',           '1.5.0'
   gem 'capybara',             '2.2.0'
