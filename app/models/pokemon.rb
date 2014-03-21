@@ -1,4 +1,4 @@
 class Pokemon < ActiveRecord::Base
 
-  validates :nome, presence: true
+  validates :nome, :id_nacional, presence: true
 end

@@ -4,6 +4,7 @@ describe Pokemon do
 
   describe 'validações' do
 
-    it { expect(Pokemon).to valida_presenca_de_string :nome }
+    it { should validate_presence_of(:nome) }
+    it { should validate_presence_of(:id_nacional) }
   end
 end
