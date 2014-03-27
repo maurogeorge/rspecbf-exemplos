@@ -39,6 +39,10 @@ RSpec.configure do |config|
     c.syntax = :expect
   end
 
+  config.mock_with :rspec do |mocks|
+    mocks.syntax = :expect
+  end
+
   config.order = "random"
   config.render_views
   config.include FactoryGirl::Syntax::Methods
