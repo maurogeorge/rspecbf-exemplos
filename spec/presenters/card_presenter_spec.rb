@@ -27,7 +27,7 @@ describe CardPresenter do
     context 'Pokemon' do
 
       let(:objeto) do
-        instance_double(Pokemon)
+        object_double(Pokemon.new)
       end
 
       it 'retorna um paragrafo por chave' do
