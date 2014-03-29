@@ -9,7 +9,7 @@ describe PokemonsController do
     end
 
     it 'atualiza o Pokemon' do
-      atualizador_pokemon = double(AtualizadorPokemon)
+      atualizador_pokemon = instance_double(AtualizadorPokemon)
       expect(AtualizadorPokemon).to receive(:new).with(pokemon)
         .and_return(atualizador_pokemon)
       expect(atualizador_pokemon).to receive(:update!)
