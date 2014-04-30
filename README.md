@@ -23,7 +23,7 @@ Listamos todos os branches com:
 $ git branch
 ```
 
-Ao trocarmos de branch é recomendado reiniciamos o banco de dados, dado que cada branch faz o papel de uma app única. Para isso rodamos.
+Ao trocarmos de branch é recomendado reiniciarmos o banco de dados, dado que cada branch faz o papel de uma app única. Para isso rodamos.
 
 ```bash
 $ bundle exec rake db:setup
