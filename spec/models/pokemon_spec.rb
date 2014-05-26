@@ -10,11 +10,11 @@ describe Pokemon do
 
     before do
       hoje = Time.zone.local(2010, 3, 7, 12)
-      Timecop.freeze(hoje)
+      travel_to(hoje)
     end
 
     after do
-      Timecop.return
+      travel_back
     end
 
     it 'tem o pokemon escolhido ontem' do
